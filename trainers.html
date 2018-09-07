@@ -1,7 +1,8 @@
-<!DOCTYPE HTML>
+<DOCTYPE html>
 <html>
 <head>
     <title>Trainers</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
     <script src="js/data.js"></script>
     <style>
     </style>
@@ -11,8 +12,11 @@
     <div id="tSearch">
     <input id="name" name="name" type="name" placeholder="Enter Name"
     alt="enter name"/>
-    <button id="searchButton" onclick="search('name')">Search</button>
+    <input id="skill" name="skill" placeholder="Enter Skill"
+    alt="enter skill"/>
+    <button id="searchButton" onclick="search()">Search</button>
     </div>
     <div id="results"></div>
+
 </body>
 </html>

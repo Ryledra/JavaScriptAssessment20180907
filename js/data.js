@@ -37,10 +37,14 @@ data = {
   ]
 }
 
-function search(str) {
+function search() {
   clearResults();
-  if (str == 'name' && checkName(document.getElementById('name').value))  {
+  if (checkName(document.getElementById('name').value))  {
     printTrainer(document.getElementById('name').value);
+  } else if (checkSkill(document.getElementById('skill').value))  {
+    printSkilledTrainers(document.getElementById('skill').value);
+  } else  {
+    createPTag("Both inputs are blank")
   }
 }
 
@@ -58,7 +62,34 @@ function checkName(str)  {
   }
   else {
     console.log('not a real name');
-    createPTag('Please enter a real name');
+    // createPTag('Please enter a real name');
+    return false;
+  }
+}
+
+function printSkilledTrainers(str)  {
+  console.log(str);
+  passed = false;
+  var members = data.members;
+  for (i = 0; i < members.length; i++) {
+    for (j = 0; j < members[i].skills.length; j++) {
+      if (members[i].skills[j] == str)  {
+        createPTag(members[i].name);
+        passed = true;
+      }
+    }
+  }
+  if (passed == false) createPTag("No trainers with '" + str + "' skill.");
+}
+
+function checkSkill(str)  {
+  var alphaEX = /^[a-zA-Z\s]+$/;
+  if (str.match(alphaEX)) {
+    return true;
+  }
+  else {
+    console.log('not a real skill');
+    // createPTag('Please enter a real name');
     return false;
   }
 }
