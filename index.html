@@ -1,11 +1,25 @@
 <DOCTYPE html>
 <html>
 <head>
-	<title>Assessment Index - 07/09/2018</title>
+	<title>Main Page</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script src="js/formValidation.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <a id="entity1" onmouseenter="drop(1)">  JSON  </a>
+    <a id="entity2" onmouseenter="drop(2)">  Forms  </a>
+    <div id="dd1"style="position: absolute; background: #cccccc"
+        onmouseout="drop(1)" >
+        <a id="JSON" onmouseenter="high(1,1)" onmouseout="unhigh(1,1)"
+            href="trainers.html">JSON manipulation</a>
+    </div>
+    <div id="dd2" style="position: absolute; background: #cccccc"
+        onmouseout="drop(2)">
+        <a id="entry" onmouseenter="high(2,1)"  onmouseout="unhigh(2,1)"
+            href="entryform.html">Entry Form</a>
+        <br/><a id="form" onmouseenter="high(2,2)"  onmouseout="unhigh(2,2)"
+            href="formdata.html">Form Data</a>
+    </div>
 
 </body>
 </html>
