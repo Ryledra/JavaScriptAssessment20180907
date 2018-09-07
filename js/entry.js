@@ -14,6 +14,7 @@ function validate() {
         passed = false;
     } else {
         document.getElementById('name').style.background = 'white';
+        localStorage.setItem('forename',document.getElementById('name').value);
     }
 
     if(!document.getElementById('DofB').value.match(dOfBRX))    {
@@ -22,6 +23,7 @@ function validate() {
         passed = false;
     } else {
         document.getElementById('DofB').style.background = 'white';
+        localStorage.setItem('DofB',document.getElementById('DofB').value);
     }
 
     if(!document.getElementById('email').value.match(emailRX))    {
@@ -30,6 +32,7 @@ function validate() {
         passed = false;
     } else {
         document.getElementById('email').style.background = 'white';
+        localStorage.setItem('email',document.getElementById('email').value);
     }
 
     if(!document.getElementById('address').value.match(addRX))    {
@@ -38,6 +41,7 @@ function validate() {
         passed = false;
     } else {
         document.getElementById('address').style.background = 'white';
+        localStorage.setItem('address',document.getElementById('address').value);
     }
 
     if(!document.getElementById('pCode').value.match(pcRX))    {
@@ -46,6 +50,7 @@ function validate() {
         passed = false;
     } else {
         document.getElementById('pCode').style.background = 'white';
+        localStorage.setItem('pCode',document.getElementById('pCode').value);
     }
 
     return passed;
