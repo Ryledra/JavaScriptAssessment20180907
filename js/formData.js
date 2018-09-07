@@ -1,15 +1,10 @@
 
 onload = function() {
-    var name = localStorage.getItem("forename");
-    var DofB = localStorage.getItem("DofB");
-    var email = localStorage.getItem("email");
-    var address = localStorage.getItem("address");
-    var postcode = localStorage.getItem("pCode");
 
-    document.getElementById("name").innerHTML += name;
-    document.getElementById("DofB").innerHTML += DofB;
-    document.getElementById("email").innerHTML += email;
-    document.getElementById("address").innerHTML += address;
-    document.getElementById("pCode").innerHTML += postcode;
+    document.getElementById("name").innerHTML += localStorage.getItem("forename");
+    document.getElementById("DofB").innerHTML += localStorage.getItem("DofB");
+    document.getElementById("email").innerHTML += localStorage.getItem("email");
+    document.getElementById("address").innerHTML += localStorage.getItem("address");
+    document.getElementById("pCode").innerHTML += localStorage.getItem("pCode");
 
 }
