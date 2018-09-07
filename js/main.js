@@ -6,18 +6,18 @@ onload = function() {
 
 function drop(i)    {
     if(i == 1)    {
-        if(document.getElementById("dd1").style.display == 'none')	{
-		document.getElementById("dd1").style.display = 'block';
-	    } else {
-		document.getElementById("dd1").style.display = 'none';
-		}
+        dropFunction("dd1");
     } else if (i == 2)  {
-        if(document.getElementById("dd2").style.display == 'none')	{
-		document.getElementById("dd2").style.display = 'block';
-	    } else {
-		document.getElementById("dd2").style.display = 'none';
-		}
+        dropFunction("dd2");
     }
+}
+
+function dropFunction(str)	{
+	if(document.getElementById(str).style.display == 'none')	{
+		document.getElementById(str).style.display = 'block';
+	} else {
+		document.getElementById(str).style.display = 'none';
+	}
 }
 
 // function close(i)	{
@@ -31,39 +31,39 @@ function drop(i)    {
 function high(i,j)	{
 	if (i == 1)	{
 		if (j == 1)	{
-			document.getElementById("JSON").style.background = '#23705f';
-			document.getElementById("JSON").innerHTML += '*';
-			document.getElementById("JSON").style.color = 'white';
+			highlight('JSON');
 		}
 	} else if (i == 2)	{
 		if (j == 1)	{
-			document.getElementById("entry").style.background = '#23705f';
-			document.getElementById("entry").innerHTML += '*';
-			document.getElementById("entry").style.color = 'white';
+			highlight('entry');
 		} else if (j == 2)	{
-			document.getElementById("form").style.background = '#23705f';
-			document.getElementById("form").style.color = 'white';
-			document.getElementById("form").innerHTML += '*';
+			highlight('form');
 		}
 	}
+}
+
+function highlight(str)	{
+	document.getElementById(str).style.background = '#23705f';
+	document.getElementById(str).innerHTML += '*';
+	document.getElementById(str).style.color = 'white';
 }
 
 function unhigh(i,j)	{
 	if (i == 1)	{
 		if (j == 1)	{
-			document.getElementById("JSON").style.background = '#cccccc';
-			document.getElementById("JSON").innerHTML = 'JSON manipulation';
-			document.getElementById("JSON").style.color = 'blue';
+			unhighlight('JSON','JSON Manipulation');
 		}
 	} else if (i == 2)	{
 		if (j == 1)	{
-			document.getElementById("entry").style.background = '#cccccc';
-			document.getElementById("entry").innerHTML = 'Entry Form';
-			document.getElementById("entry").style.color = 'blue';
+			unhighlight('entry','Entry Form');
 		} else if (j == 2)	{
-			document.getElementById("form").style.background = '#cccccc';
-			document.getElementById("form").innerHTML = 'Form Data';
-			document.getElementById("form").style.color = 'blue';
+			unhighlight('form','Form Data');
 		}
 	}
+}
+
+function unhighlight(str, str1)	{
+	document.getElementById(str).style.background = '#cccccc';
+	document.getElementById(str).innerHTML = str1;
+	document.getElementById(str).style.color = 'blue';
 }
