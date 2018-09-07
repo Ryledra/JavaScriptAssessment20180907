@@ -6,9 +6,7 @@ function validate() {
     var addRX = /^[0-9]+[\s]{1}[A-Za-z\s]+$/;
     var pcRX = /^[A-Z]{1,2}[0-9]{1,2}\s[0-9]{1,2}[A-Z]{2}$/;
 
-    var passed = true;
-
-    passed = checkRX('name', nameRX);
+    var passed = checkRX('name', nameRX);
     passed = checkRX('DofB', dOfBRX);
     passed = checkRX('email', emailRX);
     passed = checkRX('address', addRX);
