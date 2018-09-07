@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Entry Form</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/entry.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <form id="form" onsubmit="return validate()" action="formdata.html">
+        <p1>Forename:</p1>
+        <input type="name" name="name" id="name" placeholder="Forename" alt="enter name" />
+        <br/><p1>Date of Birth:</p1>
+        <input name="DofB" id="DofB" placeholder="DD/MM/YYYY" alt="enter date of birth" />
+        <br/><p1>Email:</p1>
+        <input name="email" id="email" placeholder="Email" alt="enter email" />
+        <br/><p1>Address (first line):</p1>
+        <input name="address" id="address" placeholder="Address" alt="enter address first line" />
+        <br/><p1>Postcode:</p1>
+        <input name="pCode" id="pCode" placeholder="Postcode" alt="enter postcode" />
+        <br/>
+        <input type="submit" />
+    </form>
+</body>
+</html>
