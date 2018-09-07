@@ -1,13 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <title>Trainers</title>
+    <script src="js/data.js"></script>
     <style>
     </style>
 </head>
 <body>
-
-    <script src="data.js"></script>
-<script>
-</script>
+    <h2>Trainer Search</h2>
+    <div id="tSearch">
+    <input id="name" name="name" type="name" placeholder="Enter Name"
+    alt="enter name"/>
+    <button id="searchButton" onclick="search('name')">Search</button>
+    </div>
+    <div id="results"></div>
 </body>
 </html>
